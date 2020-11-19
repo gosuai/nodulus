@@ -164,8 +164,8 @@ namespace View.Items
         public void Float(Direction dir)
         {
             // TODO: make configurable
-            const float time = 1f;
-            const float amount = 0.3f;
+            //const float time = 1f;
+            //const float amount = 0.3f;
 
 //            var rot = Quaternion.Euler(90f, 0f, 0f)
 //                      * Quaternion.Inverse(transform.localRotation) 

@@ -137,3 +137,7 @@ fabric.properties
 *.mobileprovision
 *.cer
 *.p12
+
+/Assets/Plugins/Android/
+/Logs/
+/.gradle/
