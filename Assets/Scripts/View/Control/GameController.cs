@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using GDP;
 
 #if UNITY_ANDROID
 using Unity.Notifications.Android;
@@ -21,8 +20,6 @@ namespace View.Control
 
 		void Start()
 		{
-			//Debug.LogWarning("GameController Start");
-			//InitializeFirebase();
 			Invoke(nameof(ShowNotifications), 10);
 		}
 		void ShowNotifications () {
@@ -80,7 +77,7 @@ namespace View.Control
 		}
 		void Awake()
 		{
-			Debug.LogWarning("GameController Awake");
+			Debug.Log("GameController Awake");
 		}
 	}
 }
