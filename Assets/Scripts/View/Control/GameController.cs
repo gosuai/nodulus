@@ -26,6 +26,7 @@ namespace View.Control
 			ShowNotification(0, "0", "0", 0, 100, "intent-data-0", true);
 			ShowNotification(60, "60", "60", 60, 600, "intent-data-60", false);
 			ShowNotification(120, "120", "120", 120, 1200, "intent-data-120", false);
+			ShowNotification(122, "122", "122", 3600, 1, "intent-data-122", false);
 		}
 	
 		public void InitializeFirebase() {
@@ -65,9 +66,9 @@ namespace View.Control
             AndroidNotificationCenter.RegisterNotificationChannel(channel);
 			var notification = new AndroidNotification(title, text, System.DateTime.Now.AddSeconds(delay))
 			{
-				Number = number, IntentData = intentData, ShowTimestamp = showTimestamp
+				Number = number, IntentData = intentData, ShowTimestamp = showTimestamp,
 			};
-			AndroidNotificationCenter.SendNotification(notification, channel.Id);
+			AndroidNotificationCenter.SendNotificationWithExplicitID(notification, channel.Id, id);
 #endif
 		}
 
